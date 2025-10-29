@@ -1,59 +1,38 @@
-# AppProductos
+Formulario de Productos en Angular
+Descripción
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.6.
+Este proyecto es una aplicación web básica desarrollada en Angular que permite a los usuarios agregar productos mediante un formulario y visualizarlos en cartas. Cada carta muestra la información ingresada: nombre, descripción, categoría, precio e imagen. Además, cada producto puede ser eliminado individualmente.
 
-## Development server
+El objetivo del proyecto fue practicar la creación de componentes, formularios, manejo de listas dinámicas y estilizado básico con CSS.
 
-To start a local development server, run:
+Funcionalidades
 
-```bash
-ng serve
-```
+Formulario para ingresar un nuevo producto con los campos:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Nombre
 
-## Code scaffolding
+Descripción
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Categoría
 
-```bash
-ng generate component component-name
-```
+Imagen (URL)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Precio
 
-```bash
-ng generate --help
-```
+Visualización de productos en cartas dinámicas.
 
-## Building
+Cada carta incluye un botón para eliminar el producto.
 
-To build the project run:
+Estilo básico y limpio usando CSS, con un header principal y un diseño responsive simple.
 
-```bash
-ng build
-```
+Placeholder de imagen para casos donde la URL ingresada no sea válida.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Tecnologías usadas
 
-## Running unit tests
+Angular (Standalone Components)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+TypeScript
 
-```bash
-ng test
-```
+HTML
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+CSS
