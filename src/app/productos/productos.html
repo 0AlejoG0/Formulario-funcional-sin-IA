@@ -1,0 +1,51 @@
+
+<header class="header">
+  <h1>Tarea Quipux</h1>
+  <p>Agrega productos y visualízalos aquí</p>
+</header>
+<div class="contenedor">
+  <div class="productos-lista">
+    <h2>Productos Agregados</h2>
+    <div class="tarjetas">
+      <div class="tarjeta" *ngFor="let p of productos; let i = index">
+        <img
+          [src]="p.imagen || 'https://via.placeholder.com/150'"
+          (error)="$event.target.src = 'https://via.placeholder.com/150'"
+          alt="Imagen del producto"
+        />
+        <h3>{{ p.nombre }}</h3>
+        <p>{{ p.descripcion }}</p>
+        <p><strong>Precio:</strong> ${{ p.precio }}</p>
+        <p>
+          <em>{{ p.categoria }}</em>
+        </p>
+        <button class="eliminar" (click)="eliminarProducto(i)">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="formulario">
+    <h2>Agregar Producto</h2>
+
+    <label>Nombre:</label>
+    <input [(ngModel)]="nuevoProducto.nombre" type="text" placeholder="Nombre del producto" />
+
+    <label>Descripción:</label>
+    <input [(ngModel)]="nuevoProducto.descripcion" type="text" placeholder="Descripción" />
+
+    <label>Categoría:</label>
+    <input [(ngModel)]="nuevoProducto.categoria" type="text" placeholder="Categoría" />
+
+    <label>Imagen URL:</label>
+    <input
+      [(ngModel)]="nuevoProducto.imagen"
+      type="text"
+      placeholder="https://example.com/imagen.jpg"
+    />
+
+    <label>Precio:</label>
+    <input [(ngModel)]="nuevoProducto.precio" type="number" placeholder="0" />
+
+    <button (click)="guardarProducto()">Guardar</button>
+  </div>
+</div>
